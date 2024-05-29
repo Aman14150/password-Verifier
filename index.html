@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p class="label-text">Enter password</p>
+        <input class="password" id="pass" placeholder="">
+        <button onclick="check()" class="checkalue">Check</button>
+    </div>
+
+    <script>
+        let checkpassEl = document.getElementById('pass');
+
+        function check() {
+            let pass = checkpassEl.value;
+            console.log(typeof pass);
+            if (pass.length <= 6 && pass.endsWith('#')) {
+                alert("Password verified");
+            } else {
+                alert("Invalid password");
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- read a string
+check lenght of a string, it has to be above or equal to 6
+it has to be # in the end of the word
+if both the condition satisfied the message to user that password verified
+or show message invalid password -->
